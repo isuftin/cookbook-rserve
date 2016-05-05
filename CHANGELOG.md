@@ -1,6 +1,10 @@
 ## Changelog
 ---------
 
+- 0.1.6
+  -----
+  - [isuftin@usgs.gov] - Added IPTables rule
+
 - 0.1.5
   -----
   - [isuftin@usgs.gov] - Updated dependencies for cookbooks

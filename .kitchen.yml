@@ -19,17 +19,18 @@ platforms:
       box: bento/centos-6.7
       box_url: bento/centos-6.7
       provider: vmware_fusion
-  - name:  ubuntu-trusty-vbox
-    driver:
-      box: ubuntu/trusty64
-      box_url: ubuntu/trusty64
-      provider: virtualbox
 
 suites:
   - name: default
     run_list:
       - recipe[iptables]
-      - recipe[RServe]
+      - recipe[RServe::add_epel]
+      - recipe[RServe::install_r]
+      - recipe[RServe::install_rserve]
+      - recipe[RServe::create_rserve_service]
+      - recipe[RServe::create_credentials]
+      - recipe[RServe::rserved_service]
+      - recipe[RServe::iptables_rule]
     attributes: {}
     data_path: installation_data
     data_bags_path: './test/integration/default/data_bags/'
