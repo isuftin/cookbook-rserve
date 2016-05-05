@@ -7,10 +7,10 @@
 
 user_name = node['RServe']['user_name']
 group_name = node['RServe']['group_name']
-accounts = node['RServe']['accounts']
-
-# TODO- Check if an encrypted data bag item exists for the accounts hash
-# and if it exists, use that instead 
+data_bag_name = node['RServe']['credentials_data_bag_name']
+data_bag_item = node['RServe']['credentials_data_bag_item']
+credentials_data_bag_item = data_bag_item(data_bag_name, data_bag_item)
+accounts = credentials_data_bag_item['accounts']
 
 template "/home/#{user_name}/pwdfile" do
 	source "pwdfile.erb"
