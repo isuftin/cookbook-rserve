@@ -8,8 +8,9 @@ Requirements
 - CentOS 6.x
 
 ### Cookbooks
-- IPTables - https://supermarket.chef.io/cookbooks/iptables
-- Yum-EPEL - https://supermarket.chef.io/cookbooks/yum-epel
+- iptables - https://supermarket.chef.io/cookbooks/iptables
+- yum-epel - https://supermarket.chef.io/cookbooks/yum-epel
+- doi_ssl_filtering - https://github.com/USGS-CIDA/chef-cookbook-doi-ssl-filtering (optional)
 
 Attributes
 ----------

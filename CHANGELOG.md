@@ -3,6 +3,7 @@
 
 - 0.1.7
   -----
+  - [isuftin@usgs.gov] - Added doi_ssl_filtering cookbook into Berksfile for testing on DOI network. Optional to use.
   - [isuftin@usgs.gov] - Removed yum from Berksfile. No longer depending on it. 
   - [isuftin@usgs.gov] - Updated documentation
 
