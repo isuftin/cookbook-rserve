@@ -5,14 +5,22 @@ Description of cookbook
 Requirements
 ------------
 ### Platforms
-- CentOS 6.6
+- CentOS 6.x
 
 ### Cookbooks
-- Dependency cookbook
+- IPTables - https://supermarket.chef.io/cookbooks/iptables
+- Yum-EPEL - https://supermarket.chef.io/cookbooks/yum-epel
 
 Attributes
 ----------
-- `node[RServe]['attribute']` = Description of attribute  (String)
+- `node['RServe']['cran_repo']` = The URL to use for the CRAN repository to get RServe dependencies
+- `node['RServe']['rserve_package_location']` = The URL to get the RServe installation package
+- `node['RServe']['startup_options']` = The startup options to add to /usr/lib64/R/bin/Rserv.sh
+- `node['RServe']['group_name']` = The group RServe will run under
+- `node['RServe']['user_name']` = The user RServe will run under
+- `node['RServe']['configuration']` = An array of strings that define the configuration file for RServe
+- `node['RServe']['credentials_data_bag_name']` = The data bag name to use for looking up RServe credentials
+- `node['RServe']['credentials_data_bag_item']` = The data bag item within which credentials are stored
 
 
 Usage
