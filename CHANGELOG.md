@@ -1,6 +1,11 @@
 ## Changelog
 ---------
 
+- 0.1.7
+  -----
+  - [isuftin@usgs.gov] - Removed yum from Berksfile. No longer depending on it. 
+  - [isuftin@usgs.gov] - Updated documentation
+
 - 0.1.6
   -----
   - [isuftin@usgs.gov] - Added IPTables rule
