@@ -5,6 +5,8 @@
 #
 # Description: Installs the RServe package
 
+package 'openssl-devel'
+
 remote_install_file = node['RServe']['rserve_package_location']
 install_script = "/tmp/rserve_install.R"
 root = "root"

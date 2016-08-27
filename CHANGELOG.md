@@ -1,11 +1,16 @@
 ## Changelog
 ---------
 
+- 0.1.8
+  -----
+  - [isuftin@usgs.gov] - Now installing openssl-devel since current version of RServe seems to require it
+
 - 0.1.7
   -----
   - [isuftin@usgs.gov] - Added doi_ssl_filtering cookbook into Berksfile for testing on DOI network. Optional to use.
+  - [isuftin@usgs.gov] - Updated the default version of RServe downloaded.
   - [isuftin@usgs.gov] - Removed yum from Berksfile. No longer depending on it. 
-  - [isuftin@usgs.gov] - Updated documentation
+  - [isuftin@usgs.gov] - Updated documentation.
 
 - 0.1.6
   -----
