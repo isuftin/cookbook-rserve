@@ -6,6 +6,7 @@ default['RServe']['startup_options'] = "--no-save"
 default['RServe']['group_name'] = "rserver"
 default['RServe']['user_name'] = "rserver"
 
+
 default['RServe']['configuration'] = [
   "workdir  /tmp",
   "remote enable",
@@ -17,3 +18,6 @@ default['RServe']['configuration'] = [
 
 default['RServe']['credentials_data_bag_name'] = "rserve-_default"
 default['RServe']['credentials_data_bag_item'] = "credentials"
+
+# The version of R to be installed
+default['RServe']['r_version'] = "3.3.1-2.el6"
