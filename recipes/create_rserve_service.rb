@@ -13,6 +13,7 @@ group group_name
 
 user user_name do
 	gid group_name
+	manage_home true
 end
 
 file "/var/log/rserve.log" do

@@ -5,4 +5,6 @@
 #
 # Description: Installs the R 
 
-package 'R'
+package 'R' do
+	version node['RServe']['r_version']
+end

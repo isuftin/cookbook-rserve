@@ -1,6 +1,11 @@
 ## Changelog
 ---------
 
+- 0.1.9
+  -----
+  - Updated to latest versions of libraries. 
+  - Allowing user to select R version to install.
+
 - 0.1.8
   -----
   - [isuftin@usgs.gov] - Now installing openssl-devel since current version of RServe seems to require it
