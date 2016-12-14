@@ -1,6 +1,11 @@
 ## Changelog
 ---------
 
+- 0.1.10
+  -----
+  - Removing IPTables templating in favor of attribute setting
+  - Allowing user to install latest version of R
+
 - 0.1.9
   -----
   - Updated to latest versions of libraries. 
