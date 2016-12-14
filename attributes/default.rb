@@ -6,6 +6,8 @@ default['RServe']['startup_options'] = "--no-save"
 default['RServe']['group_name'] = "rserver"
 default['RServe']['user_name'] = "rserver"
 
+default['RServe']['iptables']['rules']['rserve_tcp_6311'] = "-A FWR -p tcp -m tcp --dport 6311 -j ACCEPT"
+
 
 default['RServe']['configuration'] = [
   "workdir  /tmp",
@@ -19,5 +21,5 @@ default['RServe']['configuration'] = [
 default['RServe']['credentials_data_bag_name'] = "rserve-_default"
 default['RServe']['credentials_data_bag_item'] = "credentials"
 
-# The version of R to be installed
-default['RServe']['r_version'] = "3.3.1-2.el6"
+# The version of R to be installed - Include version number or 'latest' to not pin to version
+default['RServe']['r_version'] = "latest"

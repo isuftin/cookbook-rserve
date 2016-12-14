@@ -5,6 +5,8 @@
 #
 # Description: Sets up IPtables openings
 
-iptables_rule 'iptables_rule_rserve_6311' do
-  action :enable
+node['RServe']['iptables']['rules'].map do |rule_name, rule_body|
+  iptables_rule rule_name do
+    lines [ rule_body ].flatten.join("\n")
+  end
 end
