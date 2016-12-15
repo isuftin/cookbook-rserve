@@ -2,4 +2,6 @@
 
 date >> /var/log/rserve.log
 
+export R_LIBS="<%= @rserv_home_libs_dir %>"
+
 /usr/lib64/R/bin/R CMD Rserve <%= @rserv_startup_option %>  >>  /var/log/rserve.log 2>&1

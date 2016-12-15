@@ -1,15 +1,20 @@
 ## Changelog
 ---------
 
+- 0.1.11
+  -----
+  - [isuftin@usgs.gov] - Add R_LIBS export to RServer startup
+  - [isuftin@usgs.gov] - Create library directory in RServe
+
 - 0.1.10
   -----
-  - Removing IPTables templating in favor of attribute setting
-  - Allowing user to install latest version of R
+  - [isuftin@usgs.gov] - Removing IPTables templating in favor of attribute setting
+  - [isuftin@usgs.gov] - Allowing user to install latest version of R
 
 - 0.1.9
   -----
-  - Updated to latest versions of libraries. 
-  - Allowing user to select R version to install.
+  - [isuftin@usgs.gov] - Updated to latest versions of libraries. 
+  - [isuftin@usgs.gov] - Allowing user to select R version to install.
 
 - 0.1.8
   -----

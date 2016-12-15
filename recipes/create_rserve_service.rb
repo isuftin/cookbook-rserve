@@ -7,6 +7,7 @@
 
 user_name = node['RServe']['user_name']
 group_name = node['RServe']['group_name']
+rserv_home_libs_dir = node['RServe']['home_libs_dir'] ? node['RServe']['home_libs_dir'] : File.join("/home", "#{user_name}", "R_libs")
 
 # Create the group and user
 group group_name
@@ -14,6 +15,11 @@ group group_name
 user user_name do
 	gid group_name
 	manage_home true
+end
+
+directory rserv_home_libs_dir do
+	owner user_name
+	group group_name
 end
 
 file "/var/log/rserve.log" do
@@ -39,7 +45,8 @@ template '/usr/lib64/R/bin/Rserv.sh' do
 	group group_name
 	mode '0550'
 	variables(
-		:rserv_startup_option => node['RServe']['startup_options']
+		:rserv_startup_option => node['RServe']['startup_options'],
+		:rserv_home_libs_dir => rserv_home_libs_dir
 	)
 end
 
