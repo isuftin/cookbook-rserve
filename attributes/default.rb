@@ -1,7 +1,9 @@
 # The repository to use for installing RServe
 default['RServe']['cran_repo'] = "http://cran.rstudio.com/"
+
+# If this attribute is empty, RServe will attempt to install from the CRAN repository
 default['RServe']['rserve_package_location'] = "http://rforge.net/Rserve/snapshot/Rserve_1.8-5.tar.gz"
-default['RServe']['startup_options'] = "--no-save"
+default['RServe']['startup_options'] = "--no-save --RS-conf /etc/Rserv.conf"
 
 default['RServe']['group_name'] = "rserver"
 default['RServe']['user_name'] = "rserver"
@@ -10,7 +12,7 @@ default['RServe']['iptables']['rules']['rserve_tcp_6311'] = "-A FWR -p tcp -m tc
 
 
 default['RServe']['configuration'] = [
-  "workdir  /tmp",
+  "workdir  /tmp/Rserv",
   "remote enable",
   "fileio enable",
   "auth required",
