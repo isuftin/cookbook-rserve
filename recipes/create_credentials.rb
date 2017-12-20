@@ -13,14 +13,12 @@ credentials_data_bag_item = data_bag_item(data_bag_name, data_bag_item)
 accounts = credentials_data_bag_item['accounts']
 
 template "/home/#{user_name}/pwdfile" do
-	source "pwdfile.erb"
-	owner user_name
-	group group_name
-	mode '0644'
-	sensitive true
-	variables(
-		:accounts => accounts
-	)
+  source 'pwdfile.erb'
+  owner user_name
+  group group_name
+  mode '0644'
+  sensitive true
+  variables(
+    accounts: accounts
+  )
 end
-
-

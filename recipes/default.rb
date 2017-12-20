@@ -3,8 +3,8 @@
 # Recipe:: default
 #
 
-if %w{rhel fedora centos}.include?(node["platform"])
-	include_recipe 'RServe::add_epel'
+if %w[rhel fedora centos].include?(node['platform'])
+  include_recipe 'RServe::add_epel'
 end
 
 include_recipe 'RServe::install_r'

@@ -6,6 +6,6 @@
 # Description: Installs and starts the rserved service
 
 # Start at boot
-service "rserved" do
-	action [:enable, :start]
+service 'rserved' do
+  action %i[enable start]
 end
